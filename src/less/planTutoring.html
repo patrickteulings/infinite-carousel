@@ -1,0 +1,31 @@
+<div>
+	<div ng-class="tutorPage">
+		<div class="jumbotron">
+				<h1>Contact Page</h1>
+
+				<p>{{ message }}</p>
+		</div>
+		<form ng-submit="addTodo()">
+			<input type="text" ng-model="todoText"  size="30" placeholder="add new todo here">
+			<input class="btn-primary" type="submit" value="add">
+		</form>
+
+		<form ng-submit="addCourse()" class="tutorPage">
+			<input type="text" ng-model="courseText"  size="30" placeholder="add new course here">
+			<input class="btn-primary" type="submit" value="add">
+		</form>
+
+		<ul class="unstyled">
+			<li ng-repeat="course in courses">
+			<span class="done">{{course.type}}</span>
+			</li>
+		</ul>
+
+
+		<ul class="unstyled">
+		    <li ng-repeat="todo in todos" class="testje">
+		      <span class="done">{{todo.text}}</span>
+		    </li>
+		</ul>
+	</div>
+</div>
